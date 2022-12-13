@@ -1,0 +1,27 @@
+{
+  "name": "obj-ui",
+  "version": "1.0.0",
+  "description": "An npm package for developing user interfaces with object-oriented JavaScript or TypeScript.",
+  "main": "index.js",
+  "author": "Finley Owen",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "b": "tsc",
+    "p": "prettier --write src",
+    "l": "tslint -p tsconfig.json",
+    "d": "typedoc src/*",
+    "t": "ts-node ./src/test"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.12",
+    "prettier": "^2.8.1",
+    "ts-node": "^10.9.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.23.21"
+  }
+}
