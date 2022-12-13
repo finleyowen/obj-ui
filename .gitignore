@@ -4,3 +4,4 @@ tsconfig.json
 build
 docs
 .npmignore
+src/__tests__
