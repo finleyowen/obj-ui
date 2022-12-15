@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[app.ts:66](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L66)
+[app.ts:71](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L71)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[app.ts:67](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L67)
+[app.ts:72](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L72)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[app.ts:65](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L65)
+[app.ts:70](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L70)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[app.ts:64](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L64)
+[app.ts:69](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L69)

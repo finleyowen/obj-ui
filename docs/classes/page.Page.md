@@ -14,14 +14,15 @@ Represents a html file
 
 ### Properties
 
-- [body](page.Page.md#body)
-- [head](page.Page.md#head)
+- [bodyComponent](page.Page.md#bodycomponent)
+- [headComponent](page.Page.md#headcomponent)
 - [lang](page.Page.md#lang)
 - [name](page.Page.md#name)
 
 ### Methods
 
 - [build](page.Page.md#build)
+- [head](page.Page.md#head)
 - [setLang](page.Page.md#setlang)
 
 ## Constructors
@@ -38,43 +39,43 @@ Represents a html file
 
 #### Defined in
 
-[page.ts:32](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/page.ts#L32)
+[page.ts:49](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L49)
 
 ## Properties
 
-### body
+### bodyComponent
 
-• **body**: [`Body`](page.Body.md)
+• `Private` **bodyComponent**: [`Body`](page.Body.md)
 
-The html file's `head` tag
+Component representing the html file's `body` tag
 
 #### Defined in
 
-[page.ts:10](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/page.ts#L10)
+[page.ts:10](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L10)
 
 ___
 
-### head
+### headComponent
 
-• **head**: [`Head`](page.Head.md)
+• `Private` **headComponent**: [`Head`](page.Head.md)
 
-The html file's `head` tag
+Component representing the html file's `head` tag
 
 #### Defined in
 
-[page.ts:8](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/page.ts#L8)
+[page.ts:8](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L8)
 
 ___
 
 ### lang
 
-• `Optional` **lang**: `string`
+• `Private` `Optional` **lang**: `string`
 
-The `html` tag's `lang` attribute (you can also set this on the App object, which will automatically set it for all pages)
+The `html` tag's `lang` attribute (you can also set this for the whole app, which will automatically set it for all pages)
 
 #### Defined in
 
-[page.ts:12](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/page.ts#L12)
+[page.ts:12](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L12)
 
 ___
 
@@ -86,7 +87,7 @@ The name of the html file to generate
 
 #### Defined in
 
-[page.ts:6](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/page.ts#L6)
+[page.ts:6](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L6)
 
 ## Methods
 
@@ -102,7 +103,35 @@ Returns a string of html, which is written into the file this page generates
 
 #### Defined in
 
-[page.ts:23](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/page.ts#L23)
+[page.ts:40](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L40)
+
+___
+
+### head
+
+▸ **head**(`cb`): `void`
+
+Gives access to this page's head component through supplied callback function used like this:
+```
+page.head(head => {
+    head.viewport();
+    head.utf8();
+});
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cb` | (`_`: [`Head`](page.Head.md)) => `void` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[page.ts:23](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L23)
 
 ___
 
@@ -110,7 +139,11 @@ ___
 
 ▸ **setLang**(`lang`): `void`
 
-Sets the value of the `lang` attribute of the `html` element (eg, `<html lang="en">`)
+Sets the value of the `lang` attribute of the `html` element like this:
+```
+page.setLang('en') // <html lang="en">...</html>
+```
+You can also set this for the whole app, which will automatically set it for all pages.
 
 #### Parameters
 
@@ -124,4 +157,4 @@ Sets the value of the `lang` attribute of the `html` element (eg, `<html lang="e
 
 #### Defined in
 
-[page.ts:18](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/page.ts#L18)
+[page.ts:35](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L35)

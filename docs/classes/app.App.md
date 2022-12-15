@@ -35,11 +35,11 @@ Constructor for the `App` class
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `config?` | [`AppConfig`](../interfaces/app.AppConfig.md) | Configuration options for the new `App` |
+| `config?` | [`AppConfig`](../interfaces/app.AppConfig.md) | Configuration object for the app |
 
 #### Defined in
 
-[app.ts:18](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L18)
+[app.ts:18](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L18)
 
 ## Properties
 
@@ -47,11 +47,11 @@ Constructor for the `App` class
 
 • `Optional` **lang**: `string`
 
-Added as a prop to the `<html>` element of each page for HTML5 conformance; eg `<html lang="en">...</html>`
+Added as an attribute to the `html` element of each page for HTML5 conformance; eg `<html lang="en">...</html>`
 
 #### Defined in
 
-[app.ts:12](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L12)
+[app.ts:12](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L12)
 
 ___
 
@@ -59,11 +59,11 @@ ___
 
 • `Optional` **outDir**: `string`
 
-The path to the folder in which this `App` will be built
+The path to the folder in which this app will be built
 
 #### Defined in
 
-[app.ts:10](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L10)
+[app.ts:10](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L10)
 
 ___
 
@@ -71,11 +71,11 @@ ___
 
 • **pages**: [`Page`](page.Page.md)[]
 
-The `Page`s included in this `App`
+The pages included in this app
 
 #### Defined in
 
-[app.ts:8](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L8)
+[app.ts:8](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L8)
 
 ## Methods
 
@@ -83,7 +83,7 @@ The `Page`s included in this `App`
 
 ▸ **build**(): `void`
 
-Uses `fs` to generate the built `.html` files in the specified `outDir`. If `outDir` is undefined, the `.html` files are generated in a `build` folder in the project's root directory.
+Uses `fs` to generate the built html files in the specified directory (`this.outDir`). If `this.outDir` is undefined, the html files are generated in a `/build` folder in the project's root directory.
 
 #### Returns
 
@@ -91,7 +91,7 @@ Uses `fs` to generate the built `.html` files in the specified `outDir`. If `out
 
 #### Defined in
 
-[app.ts:43](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L43)
+[app.ts:48](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L48)
 
 ___
 
@@ -99,14 +99,14 @@ ___
 
 ▸ **page**(`name`, `cb`): `void`
 
-Adds a new `Page` to the app
+Adds a new page to the app
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `name` | `string` | The name of the new page and its corresponding `.html` file |
-| `cb` | (`page`: [`Page`](page.Page.md)) => `void` | Function called on the new page before it's added to this `App`'s `Page`s |
+| `name` | `string` | The name of the new page and its corresponding html file |
+| `cb` | (`page`: [`Page`](page.Page.md)) => `void` | Gives access to this page for usage like this: ``` app.page('index', index => { index.head(head => { ... }) }) ``` |
 
 #### Returns
 
@@ -114,4 +114,4 @@ Adds a new `Page` to the app
 
 #### Defined in
 
-[app.ts:33](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/app.ts#L33)
+[app.ts:38](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L38)

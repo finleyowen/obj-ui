@@ -50,7 +50,7 @@ Represents a html element
 
 #### Defined in
 
-[component.ts:83](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L83)
+[component.ts:90](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L90)
 
 ## Properties
 
@@ -58,11 +58,9 @@ Represents a html element
 
 • **children**: [`Component`](component.Component.md)[]
 
-Components nested inside this component
-
 #### Defined in
 
-[component.ts:8](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L8)
+[component.ts:7](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L7)
 
 ___
 
@@ -70,11 +68,11 @@ ___
 
 • **props**: `ComponentProp`[]
 
-Key, value pairs rendered as props (eg, `key="value" `) on the html element this component represents
+Key, value pairs rendered as attributes (eg, `key="value" `) on the html element this component represents
 
 #### Defined in
 
-[component.ts:6](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L6)
+[component.ts:6](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L6)
 
 ___
 
@@ -86,7 +84,7 @@ The tag of the html element this component represents
 
 #### Defined in
 
-[component.ts:4](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L4)
+[component.ts:4](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L4)
 
 ___
 
@@ -94,11 +92,11 @@ ___
 
 • `Private` `Optional` **value**: `string`
 
-Only defined for components of the `SpecialTags.text` tag, the only tag that doesn't represent a html element. You shouldn't interact with this component directly for validation purposes; instead, initialise it with the `text(value: string)` method
+Only defined for components with the `SpecialTags.text` tag. These are the only components that don't represent html elements and you shouldn't interact with them directly for validation purposes; instead, initialise them within the parent component with the `component.text(value: string)` method
 
 #### Defined in
 
-[component.ts:10](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L10)
+[component.ts:9](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L9)
 
 ## Methods
 
@@ -116,7 +114,7 @@ html code generated for this component.
 
 #### Defined in
 
-[component.ts:51](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L51)
+[component.ts:58](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L58)
 
 ___
 
@@ -141,7 +139,7 @@ The updated parent component (this)
 
 #### Defined in
 
-[component.ts:29](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L29)
+[component.ts:36](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L36)
 
 ___
 
@@ -153,9 +151,9 @@ Gives the component an id prop
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `string` | The component's `id` prop |
 
 #### Returns
 
@@ -163,7 +161,7 @@ Gives the component an id prop
 
 #### Defined in
 
-[component.ts:19](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L19)
+[component.ts:26](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L26)
 
 ___
 
@@ -171,7 +169,7 @@ ___
 
 ▸ **prop**(`key`, `value`): [`Component`](component.Component.md)
 
-Adds a prop to this `Component`
+Adds a prop to this component
 
 #### Parameters
 
@@ -184,9 +182,11 @@ Adds a prop to this `Component`
 
 [`Component`](component.Component.md)
 
+the updated component
+
 #### Defined in
 
-[component.ts:13](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L13)
+[component.ts:17](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L17)
 
 ___
 
@@ -210,4 +210,4 @@ The updated parent component (this)
 
 #### Defined in
 
-[component.ts:41](https://github.com/finleyowen/obj-ui/blob/d7bb1f5/src/component.ts#L41)
+[component.ts:48](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L48)

@@ -4,15 +4,32 @@ import { Component } from './component';
 export class Page {
     /** The name of the html file to generate */
     name: string;
-    /** The html file's `head` tag */
-    head: Head;
-    /** The html file's `head` tag */
-    body: Body;
-    /** The `html` tag's `lang` attribute (you can also set this on the App object, which will automatically set it for all pages) */
-    lang?: string;
+    /** Component representing the html file's `head` tag */
+    private headComponent: Head;
+    /** Component representing the html file's `body` tag */
+    private bodyComponent: Body;
+    /** The `html` tag's `lang` attribute (you can also set this for the whole app, which will automatically set it for all pages) */
+    private lang?: string;
+
+    /** 
+     * Gives access to this page's head component through supplied callback function used like this:
+     * ```
+     * page.head(head => {
+     *     head.viewport();
+     *     head.utf8();
+     * });
+     * ```
+     */
+    head(cb: (_: Head) => void) {
+        cb(this.headComponent)
+    }
 
     /**
-     * Sets the value of the `lang` attribute of the `html` element (eg, `<html lang="en">`)
+     * Sets the value of the `lang` attribute of the `html` element like this:
+     * ```
+     * page.setLang('en') // <html lang="en">...</html>
+     * ```
+     * You can also set this for the whole app, which will automatically set it for all pages.
      * @param lang the value to set the `lang` attribute
      */
     setLang(lang: string) {
@@ -25,14 +42,14 @@ export class Page {
         if (this.lang) {
             html += ` lang="${this.lang}"`
         }
-        html += '>' + this.head.build() + this.body.build() + '</html>';
+        html += '>' + this.headComponent.build() + this.bodyComponent.build() + '</html>';
         return html;
     }
 
     constructor(name: string) {
         this.name = name
-        this.head = new Head()
-        this.body = new Body()
+        this.headComponent = new Head()
+        this.bodyComponent = new Body()
     }
 }
 

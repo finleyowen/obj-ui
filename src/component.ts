@@ -2,20 +2,27 @@
 export class Component {
     /** The tag of the html element this component represents */
     tag?: string | SpecialTags;
-    /** Key, value pairs rendered as props (eg, `key="value" `) on the html element this component represents */
+    /** Key, value pairs rendered as attributes (eg, `key="value" `) on the html element this component represents */
     props: ComponentProp[];
-    /** Components nested inside this component */
     children: Component[];
-    /** Only defined for components of the `SpecialTags.text` tag, the only tag that doesn't represent a html element. You shouldn't interact with this component directly for validation purposes; instead, initialise it with the `text(value: string)` method */
+    /** Only defined for components with the `SpecialTags.text` tag. These are the only components that don't represent html elements and you shouldn't interact with them directly for validation purposes; instead, initialise them within the parent component with the `component.text(value: string)` method */
     private value?: string;
 
-    /** Adds a prop to this `Component` */
+    /**
+     * Adds a prop to this component
+     * @param key 
+     * @param value 
+     * @returns the updated component
+     */
     prop(key: string, value: string) {
         this.props.push({ key, value });
         return this;
     }
 
-    /** Gives the component an id prop */
+    /** 
+     * Gives the component an id prop 
+     * @param id The component's `id` prop
+     */
     id(id: string) {
         this.prop('id', id);
     }
@@ -88,6 +95,7 @@ export class Component {
     }
 }
 
+/** Represents an attribute of a html element */
 interface ComponentProp {
     key: string;
     value: string;
