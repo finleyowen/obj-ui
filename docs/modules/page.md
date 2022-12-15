@@ -9,3 +9,7 @@
 - [Body](../classes/page.Body.md)
 - [Head](../classes/page.Head.md)
 - [Page](../classes/page.Page.md)
+
+### Interfaces
+
+- [EventListener](../interfaces/page.EventListener.md)

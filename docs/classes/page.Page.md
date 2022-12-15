@@ -39,7 +39,7 @@ Represents a html file
 
 #### Defined in
 
-[page.ts:49](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L49)
+[page.ts:49](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L49)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Component representing the html file's `body` tag
 
 #### Defined in
 
-[page.ts:10](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L10)
+[page.ts:10](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L10)
 
 ___
 
@@ -63,7 +63,7 @@ Component representing the html file's `head` tag
 
 #### Defined in
 
-[page.ts:8](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L8)
+[page.ts:8](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L8)
 
 ___
 
@@ -75,7 +75,7 @@ The `html` tag's `lang` attribute (you can also set this for the whole app, whic
 
 #### Defined in
 
-[page.ts:12](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L12)
+[page.ts:12](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L12)
 
 ___
 
@@ -87,7 +87,7 @@ The name of the html file to generate
 
 #### Defined in
 
-[page.ts:6](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L6)
+[page.ts:6](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L6)
 
 ## Methods
 
@@ -103,7 +103,7 @@ Returns a string of html, which is written into the file this page generates
 
 #### Defined in
 
-[page.ts:40](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L40)
+[page.ts:40](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L40)
 
 ___
 
@@ -131,7 +131,7 @@ page.head(head => {
 
 #### Defined in
 
-[page.ts:23](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L23)
+[page.ts:23](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L23)
 
 ___
 
@@ -157,4 +157,4 @@ You can also set this for the whole app, which will automatically set it for all
 
 #### Defined in
 
-[page.ts:35](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L35)
+[page.ts:35](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L35)

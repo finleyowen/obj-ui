@@ -10,8 +10,8 @@ export class Component {
 
     /**
      * Adds a prop to this component
-     * @param key 
-     * @param value 
+     * @param key
+     * @param value
      * @returns the updated component
      */
     prop(key: string, value: string) {
@@ -19,8 +19,8 @@ export class Component {
         return this;
     }
 
-    /** 
-     * Gives the component an id prop 
+    /**
+     * Gives the component an id prop
      * @param id The component's `id` prop
      */
     id(id: string) {
@@ -42,7 +42,7 @@ export class Component {
 
     /**
      * Inserts text between this component's children. Note that all components and text are rendered in the order they're created in.
-     * @param value 
+     * @param value
      * @returns The updated parent component (this)
      */
     text(value: string) {

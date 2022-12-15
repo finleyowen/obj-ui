@@ -11,7 +11,7 @@ export class Page {
     /** The `html` tag's `lang` attribute (you can also set this for the whole app, which will automatically set it for all pages) */
     private lang?: string;
 
-    /** 
+    /**
      * Gives access to this page's head component through supplied callback function used like this:
      * ```
      * page.head(head => {
@@ -21,7 +21,7 @@ export class Page {
      * ```
      */
     head(cb: (_: Head) => void) {
-        cb(this.headComponent)
+        cb(this.headComponent);
     }
 
     /**
@@ -33,23 +33,23 @@ export class Page {
      * @param lang the value to set the `lang` attribute
      */
     setLang(lang: string) {
-        this.lang = lang
+        this.lang = lang;
     }
 
     /** Returns a string of html, which is written into the file this page generates */
     build(): string {
         let html = '<!DOCTYPE html><html';
         if (this.lang) {
-            html += ` lang="${this.lang}"`
+            html += ` lang="${this.lang}"`;
         }
         html += '>' + this.headComponent.build() + this.bodyComponent.build() + '</html>';
         return html;
     }
 
     constructor(name: string) {
-        this.name = name
-        this.headComponent = new Head()
-        this.bodyComponent = new Body()
+        this.name = name;
+        this.headComponent = new Head();
+        this.bodyComponent = new Body();
     }
 }
 
@@ -104,8 +104,12 @@ export class Head extends Component {
     }
 }
 
-interface EventListener {
+/** Object that will be compiled into code to add an event listener to an element in a html `body`. */
+export interface EventListener {
+    /** The `id` attribute of the element */
     elementId: string;
+    /** The event to respond to */
     event: string;
+    /** JavaScript code, written **in a string**, to be called on the event */
     call: string;
 }

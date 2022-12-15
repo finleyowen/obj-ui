@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[component.ts:106](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L106)
+[component.ts:106](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L106)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[component.ts:107](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L107)
+[component.ts:107](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L107)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[component.ts:105](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L105)
+[component.ts:105](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L105)

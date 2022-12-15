@@ -39,7 +39,7 @@ Constructor for the `App` class
 
 #### Defined in
 
-[app.ts:18](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L18)
+[app.ts:18](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/app.ts#L18)
 
 ## Properties
 
@@ -51,7 +51,7 @@ Added as an attribute to the `html` element of each page for HTML5 conformance; 
 
 #### Defined in
 
-[app.ts:12](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L12)
+[app.ts:12](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/app.ts#L12)
 
 ___
 
@@ -63,7 +63,7 @@ The path to the folder in which this app will be built
 
 #### Defined in
 
-[app.ts:10](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L10)
+[app.ts:10](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/app.ts#L10)
 
 ___
 
@@ -75,7 +75,7 @@ The pages included in this app
 
 #### Defined in
 
-[app.ts:8](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L8)
+[app.ts:8](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/app.ts#L8)
 
 ## Methods
 
@@ -91,7 +91,7 @@ Uses `fs` to generate the built html files in the specified directory (`this.out
 
 #### Defined in
 
-[app.ts:48](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L48)
+[app.ts:48](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/app.ts#L48)
 
 ___
 
@@ -114,4 +114,4 @@ Adds a new page to the app
 
 #### Defined in
 
-[app.ts:38](https://github.com/finleyowen/obj-ui/blob/3898f58/src/app.ts#L38)
+[app.ts:38](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/app.ts#L38)

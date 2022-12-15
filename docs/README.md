@@ -4,11 +4,15 @@ obj-ui / [Modules](modules.md)
 `obj-ui` is an npm package for creating static HTML webpages with object-oriented JavaScript
 
 ## Overview
-`obj-ui` exports three main classes:
-- The `App` class represents directory of HTML pages. It's initialised 
-- The `Page` class represents a HTML page
-- The `Component` class represents a HTML element
-    - The `Head` and `Body`, classes, which represent `head` and `body` html elements respectively, extend the components
+`obj-ui` exports three main classes and two `extends` classes.
+
+### Main classes
+1. The [App](docs/classes/app.App.md) class represents directory of HTML pages, equivalent to a simple static website.
+2. The [Page](docs/classes/app.App.md) class represents a HTML page.
+3. The [Component](docs/classes/component.Component.md) class represents a HTML element.
+
+### Sub-classes
+The [Head](docs/classes/head.Head.md) and [Body](docs/classes/body.Body.md), classes, which represent `head` and `body` html elements respectively, both extend the [Component](docs/classes/component.Component.md) class.
 
 ## Quickstart
 1. Make a new, empty directory and use [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to install `obj-ui`

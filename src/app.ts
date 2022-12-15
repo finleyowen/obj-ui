@@ -38,7 +38,7 @@ export class App {
     page(name: string, cb: (page: Page) => void) {
         let page = new Page(name);
         if (this.lang) {
-            page.setLang(this.lang)
+            page.setLang(this.lang);
         }
         cb(page);
         this.pages.push(page);

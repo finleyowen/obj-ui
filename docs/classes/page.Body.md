@@ -46,7 +46,7 @@ Represents a `body` html element
 
 #### Defined in
 
-[page.ts:80](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L80)
+[page.ts:80](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L80)
 
 ## Properties
 
@@ -60,19 +60,19 @@ Represents a `body` html element
 
 #### Defined in
 
-[component.ts:7](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L7)
+[component.ts:7](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L7)
 
 ___
 
 ### listeners
 
-• **listeners**: `EventListener`[]
+• **listeners**: [`EventListener`](../interfaces/page.EventListener.md)[]
 
 Objects that will be compiled into event listeners in the built code
 
 #### Defined in
 
-[page.ts:59](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L59)
+[page.ts:59](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L59)
 
 ___
 
@@ -88,7 +88,7 @@ Key, value pairs rendered as attributes (eg, `key="value" `) on the html element
 
 #### Defined in
 
-[component.ts:6](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L6)
+[component.ts:6](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L6)
 
 ___
 
@@ -104,7 +104,7 @@ The tag of the html element this component represents
 
 #### Defined in
 
-[component.ts:4](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L4)
+[component.ts:4](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L4)
 
 ## Methods
 
@@ -124,7 +124,7 @@ Creates the html string to represent this body's content
 
 #### Defined in
 
-[page.ts:67](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L67)
+[page.ts:67](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L67)
 
 ___
 
@@ -153,7 +153,7 @@ The updated parent component (this)
 
 #### Defined in
 
-[component.ts:36](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L36)
+[component.ts:36](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L36)
 
 ___
 
@@ -179,7 +179,7 @@ Gives the component an id prop
 
 #### Defined in
 
-[component.ts:26](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L26)
+[component.ts:26](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L26)
 
 ___
 
@@ -193,7 +193,7 @@ Adds an event listener to this body
 
 | Name | Type |
 | :------ | :------ |
-| `listener` | `EventListener` |
+| `listener` | [`EventListener`](../interfaces/page.EventListener.md) |
 
 #### Returns
 
@@ -201,7 +201,7 @@ Adds an event listener to this body
 
 #### Defined in
 
-[page.ts:62](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L62)
+[page.ts:62](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L62)
 
 ___
 
@@ -230,7 +230,7 @@ the updated component
 
 #### Defined in
 
-[component.ts:17](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L17)
+[component.ts:17](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L17)
 
 ___
 
@@ -258,4 +258,4 @@ The updated parent component (this)
 
 #### Defined in
 
-[component.ts:48](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L48)
+[component.ts:48](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L48)

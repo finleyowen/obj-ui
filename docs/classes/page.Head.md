@@ -46,7 +46,7 @@ Represents a `head` html element
 
 #### Defined in
 
-[page.ts:102](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L102)
+[page.ts:102](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L102)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Represents a `head` html element
 
 #### Defined in
 
-[component.ts:7](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L7)
+[component.ts:7](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L7)
 
 ___
 
@@ -76,7 +76,7 @@ Key, value pairs rendered as attributes (eg, `key="value" `) on the html element
 
 #### Defined in
 
-[component.ts:6](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L6)
+[component.ts:6](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L6)
 
 ___
 
@@ -92,7 +92,7 @@ The tag of the html element this component represents
 
 #### Defined in
 
-[component.ts:4](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L4)
+[component.ts:4](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L4)
 
 ## Methods
 
@@ -114,7 +114,7 @@ html code generated for this component.
 
 #### Defined in
 
-[component.ts:58](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L58)
+[component.ts:58](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L58)
 
 ___
 
@@ -143,7 +143,7 @@ The updated parent component (this)
 
 #### Defined in
 
-[component.ts:36](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L36)
+[component.ts:36](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L36)
 
 ___
 
@@ -169,7 +169,7 @@ Gives the component an id prop
 
 #### Defined in
 
-[component.ts:26](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L26)
+[component.ts:26](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L26)
 
 ___
 
@@ -198,7 +198,7 @@ the updated component
 
 #### Defined in
 
-[component.ts:17](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L17)
+[component.ts:17](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L17)
 
 ___
 
@@ -226,7 +226,7 @@ The updated parent component (this)
 
 #### Defined in
 
-[component.ts:48](https://github.com/finleyowen/obj-ui/blob/3898f58/src/component.ts#L48)
+[component.ts:48](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/component.ts#L48)
 
 ___
 
@@ -242,7 +242,7 @@ Sets the charset of the
 
 #### Defined in
 
-[page.ts:96](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L96)
+[page.ts:96](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L96)
 
 ___
 
@@ -258,4 +258,4 @@ Sets the viewport meta tag
 
 #### Defined in
 
-[page.ts:89](https://github.com/finleyowen/obj-ui/blob/3898f58/src/page.ts#L89)
+[page.ts:89](https://github.com/finleyowen/obj-ui/blob/d2aecf8/src/page.ts#L89)

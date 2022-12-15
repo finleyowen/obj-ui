@@ -1,6 +1,6 @@
 {
   "name": "obj-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An npm package for developing user interfaces with object-oriented JavaScript or TypeScript.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
