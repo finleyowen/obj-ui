@@ -2,12 +2,13 @@
   "name": "obj-ui",
   "version": "1.0.0",
   "description": "An npm package for developing user interfaces with object-oriented JavaScript or TypeScript.",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "author": "Finley Owen",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "typescript": "^4.9.4"
   },
   "repository": {

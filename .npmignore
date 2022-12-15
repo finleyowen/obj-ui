@@ -3,3 +3,5 @@ docs
 node_modules
 .gitignore
 README.md
+tslint.json
+yarn.lock

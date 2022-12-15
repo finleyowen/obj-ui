@@ -1,56 +1,75 @@
-export default class Component {
-    tag: string;
-    props?: ComponentProp[];
-    children?: Component[];
-    innerText?: string;
-    css?: string;
+/** Represents a single `html` element */
+export class Component {
+    /** The tag of the element this `Component` represents */
+    tag?: string | SpecialTags;
+    /** Key, value pairs rendered as props on the element this `Component` represents */
+    props: ComponentProp[];
+    /** `Component`s nested inside this `Component` */
+    children: Component[];
 
+    private value?: string;
+
+    /** Adds a prop to this `Component` */
     prop(key: string, value: string) {
-        this.props === undefined ? (this.props = [{ key, value }]) : this.props.push({ key, value });
+        this.props.push({ key, value });
         return this;
     }
 
-    child(tag: string, config?: ComponentConfig) {
-        let component = new Component(tag, config);
-        this.children === undefined ? (this.children = [component]) : this.children.push(component);
+    /** G */
+    id(id: string) {
+        this.prop('id', id);
+    }
+
+    child(tag: string, cb: (component: Component) => void) {
+        let component = new Component(tag);
+        cb(component);
+        this.children.push(component);
         return this;
     }
 
     text(value: string) {
-        this.innerText = value;
-        this.tag = 'text';
-    }
-
-    style(styleString: string) {
-        this.css = styleString;
+        let text = new Component(SpecialTags.text, value);
+        this.children.push(text);
+        return this;
     }
 
     build(): string {
-        let html = `<${this.tag}`;
-        if (this.props != undefined) {
-            for (var prop of this.props) {
-                html += ` ${prop.key}="${prop.value}" `;
-            }
-        }
-        html += `>`;
-        if (this.innerText != undefined) {
-            html += this.innerText;
-        } else {
-            if (this.children != undefined) {
-                for (var child of this.children) {
-                    html += child.build();
+        var html = '';
+        switch (this.tag) {
+            case SpecialTags.text:
+                return this.value || '';
+            case SpecialTags.meta:
+                html += `<${this.tag}`;
+                if (this.props.length > 0) {
+                    for (var prop of this.props) {
+                        html += ` ${prop.key}="${prop.value}"`;
+                    }
                 }
-            }
+                html += `>`;
+                return html;
+            default:
+                html += `<${this.tag}`;
+                if (this.props.length > 0) {
+                    for (var prop of this.props) {
+                        html += ` ${prop.key}="${prop.value}"`;
+                    }
+                }
+                html += `>`;
+                if (this.children.length > 0) {
+                    for (var child of this.children) {
+                        html += child.build();
+                    }
+                }
+                html += `</${this.tag}>`;
+                return html;
         }
-        html += `</${this.tag}>`;
-        return html;
     }
 
-    constructor(tag: string, config?: ComponentConfig) {
+    constructor(tag: string, value?: string) {
         this.tag = tag;
-        this.props = config?.props;
-        this.children = config?.children;
-        this.innerText = config?.innerText;
+        this.value = value;
+        this.props = [];
+        this.children = [];
     }
 }
 
@@ -59,9 +78,8 @@ interface ComponentProp {
     value: string;
 }
 
-interface ComponentConfig {
-    props?: ComponentProp[];
-    children?: Component[];
-    style?: string;
-    innerText?: string;
+export enum SpecialTags {
+    text = 'text',
+    head = 'head',
+    meta = 'meta',
 }

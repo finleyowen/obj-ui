@@ -1,18 +1,43 @@
-import Component from '../component';
+import { Component } from '../component';
 
 test('Component', () => {
-    let component = new Component('div');
-    expect(component.build()).toBe('<div></div>');
+    expect(new Component('p').build()).toBe('<p></p>');
 });
 
-test('Component with child', () => {
-    let component = new Component('div');
-    component.child('p');
-    expect(component.build()).toBe('<div><p></p></div>');
+test('Component with text', () => {
+    expect(new Component('p').text('Hello, world!').build()).toBe('<p>Hello, world!</p>');
 });
 
-test('Component with child with text', () => {
-    let component = new Component('div');
-    component.child('p', { innerText: 'Hello' })
-    expect(component.build()).toBe('<div><p>Hello</p></div>');
+test('Componet with text and child with text', () => {
+    let component = new Component('p');
+    component.text('Hello, ');
+    component.child('b', (bold) => {
+        bold.text('world!');
+    });
+    expect(component.build()).toBe('<p>Hello, <b>world!</b></p>');
+});
+
+test('Componet with text, prop, and child with text', () => {
+    let component = new Component('p');
+    component.prop('style', 'font-family: Helvetica Neue,Helvetica,Arial,sans-serif;');
+    component.text('Hello, ');
+    component.child('b', (bold) => {
+        bold.text('world!');
+    });
+    expect(component.build()).toBe(
+        '<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">Hello, <b>world!</b></p>',
+    );
+});
+
+test('Componet with text, prop, and child with text and prop', () => {
+    let component = new Component('p');
+    component.prop('style', 'font-family: Helvetica Neue,Helvetica,Arial,sans-serif;');
+    component.text('Hello, ');
+    component.child('b', (bold) => {
+        bold.prop('style', 'color: red');
+        bold.text('world!');
+    });
+    expect(component.build()).toBe(
+        '<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">Hello, <b style="color: red">world!</b></p>',
+    );
 });

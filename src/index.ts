@@ -1,5 +1,5 @@
-import Component from './component';
+import { Component } from './component';
+import { Page } from './page';
+import { App } from './app';
 
-export {
-    Component
-}
+export { Component, Page, App };
