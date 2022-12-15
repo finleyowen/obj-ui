@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { Page } from './page';
 
-/** Represents a whole website */
+/** Represents a static website */
 export class App {
     /** The `Page`s included in this `App` */
     pages: Page[];
@@ -33,19 +33,16 @@ export class App {
     page(name: string, cb: (page: Page) => void) {
         let page = new Page(name);
         if (this.lang) {
-            page.prop('lang', this.lang);
+            page.setLang(this.lang)
         }
         cb(page);
         this.pages.push(page);
     }
 
-    /**
-     * Uses `fs` to generate the built `.html` files in the specified `outDir`. If `outDir` is undefined,
-     *
-     */
+    /** Uses `fs` to generate the built `.html` files in the specified `outDir`. If `outDir` is undefined, the `.html` files are generated in a `build` folder in the project's root directory. */
     build() {
         if (this.outDir === undefined) {
-            this.outDir = path.join(__dirname, '../../');
+            this.outDir = path.join(__dirname, '../../build');
         }
         if (!fs.existsSync(this.outDir)) {
             fs.mkdirSync(this.outDir, { recursive: true });
