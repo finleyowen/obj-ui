@@ -12,16 +12,29 @@ export class Page {
     private lang?: string;
 
     /**
-     * Gives access to this page's head component through supplied callback function used like this:
+     * Gives access to this page's head sectopm through supplied callback function used like this:
      * ```
      * page.head(head => {
      *     head.viewport();
      *     head.utf8();
+     *     ...
      * });
      * ```
      */
     head(cb: (_: Head) => void) {
         cb(this.headComponent);
+    }
+
+    /**
+     * Gives access to this page's body section through supplied callback function used like this:
+     * ```
+     * page.body(body => {
+     *     body.child('div', container => { ... })
+     * });
+     * ```
+     */
+    body(cb: (_: Body) => void) {
+        cb(this.bodyComponent);
     }
 
     /**
